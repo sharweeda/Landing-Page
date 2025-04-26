@@ -29,9 +29,13 @@ nav a {
     text-decoration: none;
     color: #fff;
 }
-nav a:hover{
-    text-decoration: underline;
-    
+nav a.active {
+    background-color:#0a8678; /* مثلا لون أخضر */
+    padding: 10px 15px; /* خط تحت اللينك */
+  }
+nav a:hover {
+    background-color:#0a8678;
+    padding: 10px 15px;
 }
 .phone span{
     display: none;
@@ -45,13 +49,17 @@ header{
     height: 100vh;
     display: flex;
     justify-content: start;
-    align-items: start;
-    text-align: center;
+    align-items: center;
     color: #fff;
+
 }
 .header-content{
-    margin-top: 30px;
-    padding: 20px;
+    width: 729px;
+    height: 305px;
+    top: 261px;
+    left: 150px;
+    gap: 24px;
+    padding-left: 50px;
 }
 .header-content .btn{
     margin-top: 5px;
@@ -70,6 +78,7 @@ header{
     background-color: orange;
     color: #000;
 }
+
 .desc ul{
     list-style: none;
 }
@@ -160,9 +169,20 @@ text-align: start;
 width: 100%;
 height: auto;
 }
+.card .images{
+    width: 70px;
+}
 
 .card-body, .card-footer {
-padding: 15px;
+    padding: 15px;
+}
+.card-footer a{
+    color: #0a8678;
+    text-decoration: none;
+}
+.card h3 ,p ,.images{
+    padding: 10px;
+    margin: 10px;
 }
 
 .repairs{
@@ -200,6 +220,42 @@ padding: 15px;
     gap: 20px;
 }
 
+.what{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    
+}
+.swiper{
+    background-color: #f3faf8;
+    padding: 10px;
+}
+.what-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.what-header h5{
+    color: #3cab90;
+}
+.slider-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.swiper-footer-content{
+    display: flex;
+    
+}
+.swiper-footer-content img{
+    margin: 0 10px;
+    width: 80px;
+}
+.frame img{
+    width: 80px;
+}
 
 footer {
     background-color: #2b3845;
