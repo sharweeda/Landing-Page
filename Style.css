@@ -45,7 +45,7 @@ header{
     height: 100vh;
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     text-align: center;
     color: #fff;
 }
