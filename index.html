@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Landing Page</title>
 </head>
 <body>
     <nav>
         <div class="logo">
-          <img src="/images/image9.png" alt="logo" />
+          <img src="/images/image 8.svg" alt="logo" />
         </div>
       
         <div class="menu">
@@ -20,9 +23,18 @@
             <li><a href="#contact-Us">Contact Us</a></li>
           </ul>
         </div>
+        <div class="menu-mob">
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#trade">Trade</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact-Us">Contact Us</a></li>
+          </ul>
+        </div>
       
         <div class="phone">
-          <span>Call Us <br />+1 2345 3456 45</span>
+          <p>Call Us </p>
+          <p>+1 2345 3456 45 </p>
         </div>
       
         <div class="menu-toggle" id="menu-toggle">
@@ -48,18 +60,19 @@
             <div class="about-content">
                 <h2>The Friendliest Installers in the South-West</h2>
                 <p>At Solidarity Solar our aims are to help our customers towards a sustainable future and genuinely care about the quality of products we use for our installs. We never sell you equipment you don't need and will always advise to the best of our ability, No hard sell or pushy sales tactics ever. We take pride in our work and do our best to make sure that we meet, or exceed, our customers' expectations. </p>
-                <div>
-                    <p><span class="green">01/</span>Collaborate with 100+ leading</p>
-                    <p><span class="green">02/</span>100+ leading universities and companies</p>
-                    <p><span class="green">03/</span>leading universities and companies</p>
-                    <p><span class="green">04/</span> universities and companies</p>
-                </div>
+
+                <div class="list-wrapper">
+                    <p><span class="green">01/</span><span>Collaborate with 100+ leading</span></p>
+                    <p><span class="green">02/</span><span>100+ leading universities and companies</span></p>
+                    <p><span class="green">03/</span><span>leading universities and companies</span></p>
+                    <p><span class="green">04/</span><span>universities and companies</span></p>
+                </div>                  
             </div>
             <div class="about-image">
                 <img src="/images/Rectangle 30.png" alt="">
                 <div class="floating-card">
                     <img src="/images/Solar Charging.svg" alt="Solar Charging">
-                    <p>The Piece That Sold Me On This Polarizing Trend</p>
+                    <p>The Piece That Sold Me On This Polarizing Trend</p>
                 </div>
             </div>
             
@@ -274,11 +287,11 @@
       </footer>
      
       <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.querySelector('.menu ul');
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.querySelector('.menu-mob');
       
-        menuToggle.addEventListener('click', () => {
-          menu.classList.toggle('active');
+        toggleButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
         });
       </script>
       

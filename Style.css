@@ -1,58 +1,94 @@
 *, *::before ,*::after{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body{
-    margin: 0;
+   
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
 }
-nav {
+nav{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    background-color: rgb(11, 149, 134);
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-  }
-  
-  nav .logo img {
-    width: 80px;
-  }
-  
-  .menu ul {
+    align-items: center;
+    padding-top: 16px;
+    padding-right: 150px;
+    padding-bottom: 16px;
+    padding-left: 150px;
+    background: #0B9586;
+
+}
+nav ul{
     display: flex;
+    gap: 8px;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-  }
-  
-  .menu ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 15px;
-  }
-  
-  nav a.active,
-  nav a:hover {
-    background-color: #0a8678;
-    border-radius: 5px;
-  }
-  
-  .phone span {
+}
+nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+
+}
+
+nav a{
+    font-weight: 400;
     font-size: 18px;
-  }
-  
-  .menu-toggle {
+    line-height: 100%;
+    letter-spacing: 0.94px;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-top: 8px;
+    padding-right: 28px;
+    padding-bottom: 8px;
+    padding-left: 28px;
+
+}
+nav a:hover{
+    background: #0000000F;
+    border-bottom: 3px solid #0000004D
+}
+
+nav .menu-mob{
+    display: none;
+}
+nav .menu-toggle{
     display: none;
     font-size: 30px;
+    color: white;
     cursor: pointer;
-  }
-  
+    z-index: 1000;
+}
+
+.phone{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 8px ;
+    color: #fff;
+}
+.phone :first-child {
+    margin: 0 ;
+    padding: 0;
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0.94px;
+color: #FFFFFF;
+}
+.phone :last-child {
+    margin: 0 ;
+    padding: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.94px;
+
+}
+
+
 
 header{
     background-image: url(/images/solar-panels-meadow\ 1.png);
@@ -91,17 +127,38 @@ header{
     color: #000;
 }
 
-.desc ul{
-    list-style: none;
+
+
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.green{
-    color: greenyellow;
+
+.list-wrapper p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 8px; 
+    font-size: 14px;
+
+    line-height: 1.5;
 }
+
+.list-wrapper .green {
+    color: #00c4b4;
+    font-weight: bold;
+    min-width: 40px; 
+    text-align: right;
+}
+
 
 .about{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px;
+
 }
 .about-image{
     width: 100%;
@@ -117,6 +174,7 @@ header{
 .about-content {
     order: 2;
     padding: 15px;
+    margin: 20px;
 }
 
 .about-image {
@@ -130,16 +188,16 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .about-image img {
+}
+
+.about-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-  }
-  
+}
 
-  .floating-card {
+
+.floating-card {
     position: absolute;
     bottom: -25px;
     left: -25px;
@@ -147,15 +205,15 @@ header{
     border-radius: 10px;
     background-color: #ffbb1c;
     padding: 15px;
-  }
-  
-  .floating-card img {
+}
+
+.floating-card img {
     width: 60%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
+}
+
 
 .power{
     background-image: url(/images/8116\ 1.png);
@@ -237,18 +295,21 @@ height: auto;
     align-items: center;
     height: 70vh;
     text-align: center;
+    padding: 10px;
 }
 .repairs-content{
     background-color: rgba(0, 0, 0, .7);
     color: #fff;
+    padding: 10px;
 }
 
 
 
 .energy-section {
     background-color: #fffcf4; 
-    padding: 40px 20px;
+    padding: 40px ;
     font-family: Arial, sans-serif;
+    
 }
 
 
@@ -536,34 +597,72 @@ color: #a0aec0;
 margin-top: 10px;
 }
 
+@media (max-width: 600px) {
+    nav {
+        padding: 16px 20px;
+        }
 
+        .menu {
+        display: none;
+        }
+
+        .menu-mob {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: #0B9586;
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+        .menu-mob.active {
+        display: flex;
+        }
+
+        nav .menu-toggle{
+        display: flex;
+        
+
+        }
+        nav ul {
+            flex-direction: column;
+        }
+
+    .energy-section {
+        padding: 20px 10px;
+    }
+
+    .left-content h2 {
+        font-size: 24px;
+    }
+
+    .left-content p {
+        font-size: 13px;
+    }
+
+    .card-energy {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .card-energy .view-link {
+        font-size: 13px;
+    }
+    }
 
 
 
 @media (min-width:768px){
-    .menu ul {
-        flex-direction: column;
-        background-color: rgb(11, 149, 134);
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        display: none;
-        text-align: center;
-      }
-    
-      .menu ul.active {
-        display: flex;
-      }
-    
-      .menu-toggle {
-        display: block;
-      }
-    
-      .phone {
-        display: none;
-      }
-
     .about {
         flex-direction: row; 
         padding: 80px 150px;
@@ -599,11 +698,9 @@ margin-top: 10px;
         width: 33,333;
     }
 
-
     .our-cards{
         width: 33,333;
     }
-
 
     .what {
         padding: 20px;
@@ -626,5 +723,55 @@ margin-top: 10px;
         flex-direction: row;
     }
 }
+
+    @media (max-width: 992px) {
+    .menu {
+        display: none;
+        }
+
+        .menu-mob {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #0B9586;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        
+        }
+
+        .menu-mob.active {
+        display: flex;
+        }
+
+        nav .menu-toggle {
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        z-index: 1000;
+        }
+        
+        nav ul {
+        flex-direction: column;
+        }
+        .container {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .left-content {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .cards-grid {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+    }
 
 
