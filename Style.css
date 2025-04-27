@@ -4,6 +4,7 @@
     padding: 0;
 }
 body{
+   
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
 }
@@ -22,6 +23,7 @@ nav ul{
     display: flex;
     gap: 8px;
     list-style: none;
+    background-color: #0B9586;
 }
 nav ul li{
     display: flex;
