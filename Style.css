@@ -114,6 +114,7 @@ header{
     left: 150px;
     gap: 24px;
     padding-left: 50px;
+    padding-right: 20px;
 }
 .header-content .btn{
     margin-top: 5px;
@@ -638,6 +639,14 @@ margin-top: 10px;
         }
         .phone{
             display: none;
+        }
+
+        .about{
+            display: flex;
+            flex-direction:column-reverse ;
+        }
+        .list-wrapper{
+            white-space: nowrap;
         }
 
     .energy-section {
