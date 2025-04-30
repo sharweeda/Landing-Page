@@ -650,7 +650,11 @@ margin-top: 10px;
         }
 
         .header-content h1 {
-            font-size: 30px;
+            font-size: 26px;
+        }
+        .header-content img{
+            width: 100%;
+            padding: 0 20px;
         }
 
         .header-content p {
