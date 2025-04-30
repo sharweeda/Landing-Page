@@ -648,6 +648,8 @@ margin-top: 10px;
           .btn button {
             width: auto;
             min-width: 160px;
+          }
+        
         .about{
             display: flex;
             flex-direction:column-reverse ;
