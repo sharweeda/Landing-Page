@@ -640,8 +640,21 @@ margin-top: 10px;
             display: none;
         }
 
-        .header-content{
-            padding: 20px;
+        .btn {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .btn button {
+            margin: 0 10px;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+        }
+
+        .header-content p {
+            font-size: 18px;
         }
 
         .about{
